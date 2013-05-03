@@ -5,9 +5,12 @@
 	<title>jQuery UI Button Test Suite</title>
 
 	<script src="../../jquery.js"></script>
-	<script src="../../resource_loader.js"></script>
+	<link rel="stylesheet" href="../../../external/qunit.css">
+	<script src="../../../external/qunit.js"></script>
+	<script src="../../jquery.simulate.js"></script>
+	<script src="../testsuite.js"></script>
 	<script>
-	loadResources({
+	TestHelpers.loadResources({
 		css: [ "ui.core", "ui.button" ],
 		js: [
 			"ui/jquery.ui.core.js",
@@ -17,17 +20,11 @@
 	});
 	</script>
 
-	<link rel="stylesheet" href="../../../external/qunit.css">
-	<script src="../../../external/qunit.js"></script>
-	<script src="../../jquery.simulate.js"></script>
-	<script src="../testsuite.js"></script>
-
+	<script src="button_common.js"></script>
 	<script src="button_core.js"></script>
-	<script src="button_defaults.js"></script>
 	<script src="button_events.js"></script>
 	<script src="button_methods.js"></script>
 	<script src="button_options.js"></script>
-	<script src="button_tickets.js"></script>
 
 	<script src="../swarminject.js"></script>
 </head>
@@ -61,10 +58,20 @@
 		<input type="radio" id="radio23" name="radio" checked="checked"><label for="radio23">Choice 3</label>
 	</div>
 </form>
+<form>
+	<div id="radio3">
+		<input type="radio" id="radio31" name="data['Page']['parse']"><label for="radio31">Choice 1</label>
+		<input type="radio" id="radio32" name="data['Page']['parse']" checked="checked"><label for="radio32">Choice 2</label>
+		<input type="radio" id="radio33" name="data['Page']['parse']"><label for="radio33">Choice 3</label>
+	</div>
+</form>
 
 <input type="checkbox" id="check"><label for="check">Toggle</label>
+<input type="checkbox" id="check2"><label for="check2">Checkbox</label>
 
 <div><input id="submit" type="submit" value="Label"></div>
+
+<button id="button1">Button</button>
 
 </div>
 </body>

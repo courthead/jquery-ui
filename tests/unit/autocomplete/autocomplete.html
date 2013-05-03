@@ -5,9 +5,12 @@
 	<title>jQuery UI Autocomplete Test Suite</title>
 
 	<script src="../../jquery.js"></script>
-	<script src="../../resource_loader.js"></script>
+	<link rel="stylesheet" href="../../../external/qunit.css">
+	<script src="../../../external/qunit.js"></script>
+	<script src="../../jquery.simulate.js"></script>
+	<script src="../testsuite.js"></script>
 	<script>
-	loadResources({
+	TestHelpers.loadResources({
 		css: [ "ui.core", "ui.menu", "ui.autocomplete" ],
 		js: [
 			"ui/jquery.ui.core.js",
@@ -19,12 +22,7 @@
 	});
 	</script>
 
-	<link rel="stylesheet" href="../../../external/qunit.css">
-	<script src="../../../external/qunit.js"></script>
-	<script src="../../jquery.simulate.js"></script>
-	<script src="../testsuite.js"></script>
-
-	<script src="autocomplete_defaults.js"></script>
+	<script src="autocomplete_common.js"></script>
 	<script src="autocomplete_core.js"></script>
 	<script src="autocomplete_events.js"></script>
 	<script src="autocomplete_methods.js"></script>
@@ -41,8 +39,8 @@
 <ol id="qunit-tests"></ol>
 <div id="qunit-fixture">
 
-<div id="ac-wrap1" class="ac-wrap"></div>
-<div id="ac-wrap2" class="ac-wrap"><input id="autocomplete" class="foo"></div>
+<div id="autocomplete-wrap1" class="autocomplete-wrap"></div>
+<div id="autocomplete-wrap2" class="autocomplete-wrap"><input id="autocomplete" class="foo"></div>
 <div id="autocomplete-contenteditable" contenteditable="" tabindex=0></div>
 <textarea id="autocomplete-textarea"></textarea>
 
